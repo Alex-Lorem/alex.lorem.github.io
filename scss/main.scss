@@ -1,0 +1,103 @@
+@import 'first','header','about','service','team','details','review','price','contact','form','footer','portfolio';                                                            
+            
+          
+$baseFont: 16px;                                                      
+$baseFamily:"OpenSans-Regular";
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    font-size: $baseFont;
+    font-family: $baseFamily;
+}
+section {
+    padding: 0 calc(50% - 683px);
+     
+    h2{
+        padding-top: 5.4%;
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-weight: 100;
+        font-family: SSP;
+        text-align: center;
+    }
+    h3{
+        font-size: 21px;
+        font-family: "OpenSans-Regular";
+        font-weight: 100;
+        letter-spacing: 0.03em;          
+        padding-bottom: 30px;
+    }
+    .subtitle{
+        text-align: center;
+        padding: 32px 32%;
+        color: #81868e;  
+    }
+    .description{
+        font-size: 14px;
+        color: #81868e;           
+        padding-top: 7.5%;           
+        line-height: 1.8;
+    }
+    .button{
+        color: white;
+        padding-top: 6px;
+        display: block;
+        height: 38px;
+        width: 142px;
+        border-radius: 20px;
+        border-color: white;
+        border-style: solid;
+        border-width: 1px;
+        text-align: center;
+        cursor: pointer;
+    }
+    button{   
+        outline: none;  
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+        
+    }   
+    svg{
+        width: 36px; 
+        height: 36px;
+    }  
+     
+    .circle__button {                        
+        border-radius: 50%;
+        background-color: #81868e; 
+        width: 53px;
+        height: 53px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+
+        &:hover { 
+            background-color: rgb(25, 189, 154);
+        .heart {
+            animation-name: turning_heart;
+             }
+        .mouse { 
+            animation-name: turning_heart;
+             }
+        .lamp {
+            animation-name: turning_heart;
+             }
+        }      
+    }
+    .c-active{
+      background-color: rgb(25, 189, 154);
+        }                         
+}                                                                                                                          
+                                         
+                                   
+                          

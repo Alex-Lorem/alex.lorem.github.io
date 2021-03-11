@@ -1,0 +1,49 @@
+.reviews{
+    background: #f3f3f3;
+}
+.review__container{
+    background: #fff;
+    padding: 4% 7%;
+    max-width: 1150px;
+    margin: auto;
+    margin-top: 20px;
+    
+}
+.review__item{
+    display: none;
+    
+}
+.review__item--active{
+    display: flex;
+    justify-content: space-between;
+}
+.review__item__text{
+    max-width: 760px;
+}
+.review__item__img{
+    object-fit: cover;
+}
+.review__description{
+    color: #81868e;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+}
+.review__name{
+    text-transform: uppercase;
+    color: #19bd9a;
+    font-family: 'OpenSans-Bold';
+    padding-top: 10px;
+}
+.review__job{
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.review__switcher__item{
+    background: url(../img/team__circle.png);
+    width: 10px;
+    height: 10px;
+    margin-left: 15px;
+}
+.review__switcher--item-active{
+    background: url(../img/team__circle-active.png);
+}

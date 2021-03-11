@@ -1,0 +1,114 @@
+.portfolio{
+    background-color: #f3f3f3;
+}
+.portfolio__container{
+    
+}
+.btn-wrapper{
+    text-align: center;
+    padding-top: 40px;
+    &:nth-child(1){
+        margin: 0;
+    }
+}
+.portfolio__button{
+    color:#464646;
+    margin-left: 25px;
+
+    &--active{    
+    text-underline-position: under;
+    text-decoration: underline;
+    text-decoration-color: #88d9c7;
+    }
+}
+.portfolio__works{
+    margin: auto;
+    margin-top: 75px;
+    width: 1110px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.portfolio__item{
+    position: relative;
+    &:hover{
+        .hidden{
+            display:block;
+        }
+    }
+}
+    @keyframes hanim{
+            0%{filter: brightness(100%);}
+            100%{filter: brightness(25%);}
+    }    
+.portfolio__img{
+    min-height: 210px;
+    max-height: 360px;
+    width: 270px;
+    object-fit: cover;
+    &:hover{
+        animation-duration: 1.5s;
+        animation-name: hanim;
+        filter: brightness(25%);
+    }
+}
+.hidden{
+    display: none;
+    position:absolute;
+    left: 0;
+    top: 0;
+    margin: 95px 42px;
+    &:hover{
+        .img-cover{
+        animation-duration: 1.5s;
+        animation-name: hanim;
+        }
+    }
+}
+.hidden__title{
+    color: #19bd9a;
+    text-transform: uppercase;
+    font-family: "SSP";
+    font-size: 20px;
+    letter-spacing: 0.2em;
+}
+.hidden__text{
+    color: #b2b3b3;
+    font-size: 12px;
+    margin-top: 45px;
+}
+
+.portfolio__footer{
+    margin: auto;
+    color: #fff;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 81.5%;
+    height: 200px;
+    text-align: center;
+    background: url(../img/portfolio_footer.png);
+    .button{
+        &:hover{
+            animation-duration: 1.5s;
+            animation-name: button_color;
+            background: #fff;
+            border-color: #19bd9a;
+            color: #19bd9a;
+            @keyframes button_color{
+                0%{ background: #19bd9a;;
+                    border-color: #fff;
+                    color: #fff;}
+                100%{background: #fff;
+                     color: #19bd9a;}
+            }
+        }
+    }
+}
+
+.portfolio__footer__title{
+    font-size: 20px;
+    padding-bottom: 30px;
+}

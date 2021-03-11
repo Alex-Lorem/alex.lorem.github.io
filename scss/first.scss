@@ -1,0 +1,51 @@
+.first{
+  height: 737px;
+  background: url(../img/background.png) 50% 50% no-repeat;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+.first__title{
+  padding-left: 7px;
+  font-weight: 400;
+  font-family: SSP;
+  font-size: 35px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.first__subtitle{
+  margin-top: 20px;
+  padding: 0 30%;
+  color: white;
+}
+.first_arrow{
+  display: block;
+}
+.arrow_down{
+  transform: translate(0px, -4px);
+  width: 10px;
+  height: 11px;
+}
+.arrow_svg{
+  position: relative;
+  top: -80%;
+  fill: white;
+}
+.first__anim{
+  animation-name: ani;
+  animation-timing-function: ease;
+  height: 36px;
+  position: relative;
+  top: 30%;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+  @keyframes ani {
+    50%{top:35%;}
+    100%{top:30%;}
+  }
+}

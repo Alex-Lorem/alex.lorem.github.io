@@ -1,0 +1,155 @@
+.team__item{
+    display: none;
+    padding: 0 12%;
+}
+.team__item--active{
+    display: flex;
+}
+.team__item-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 50px;
+}
+
+.team--img-1{
+    
+}
+.team__subtitle p{
+    text-align: right;
+}
+.team__container{
+    padding-top: 2%;
+    color:#81868E;
+}
+.team__name{
+    font-size: 20px;
+    padding-top: 3%;
+    letter-spacing: 0.06em;
+    color: #565151;
+    &:before{
+        content: "";
+        background-image: url(../img/rectangle.png);
+        height: 42px;
+        width: 4px;
+        position: absolute;
+        margin-left: 210px;
+        margin-top: 6px;
+    }
+}
+.team__career{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "OpenSans-Italic"; 
+    letter-spacing: 0.1em;
+}
+.team__subtitle{
+    font-size: 15px;
+    padding: 33px 0;
+    line-height: 24px;
+}
+.lvl__container{
+    
+}
+.lvl__item{
+    width: 20.625rem;
+    text-transform: uppercase;
+    font-family: "SSP";
+    padding-bottom: 8%;
+    letter-spacing: 0.1em;
+    flex-wrap: wrap;
+    display: flex;
+}
+.lvl__line{
+    background: url(../img/lvl_default.png);
+    width: 100%;
+    height: 4px;
+    margin-top: 5px;
+}
+.lvl__line-branding-1{
+    background: url(../img/lvl_branding.png);
+    width: 80%;
+    height: 4px;
+}
+.lvl__line-web-1{
+    background: url(../img/lvl_web.png); 
+    width: 65%;
+    height: 4px;
+}
+.lvl__line-ui-1{
+    background: url(../img/lvl_ui.png);
+    width: 75%;
+    height: 4px;
+}
+.lvl__item-procent{
+    text-align: end;
+    width: 50%;
+    display: block;
+}
+.lvl__item--left{
+    width: 50%;
+    display: block;
+}
+.team--img-1{
+    max-width: 290px;
+    max-height: 365px;
+    object-fit: cover;
+}
+
+.switcher__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+
+}
+.team__item__switcher{
+    background: url(../img/team__circle.png);
+    width: 10px;
+    height: 10px;
+    margin-left: 15px;
+}
+.switcher--active{
+    background: url(../img/team__circle-active.png);
+}
+.team__footer{
+    background: url(../img/team__footer.png);
+    object-fit: cover;
+    margin-top: 6%;
+    padding: 5% 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+.team__footer--title{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.team .button {
+    &:hover{
+    animation-name: border;
+    animation-duration: 3s;
+    background-color: #fff;
+    
+    @keyframes border{
+        0%{border-width: 1px;}
+        100%{border-width: 150px;animation-play-state: paused;}
+        }
+    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

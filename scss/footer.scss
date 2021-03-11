@@ -1,0 +1,46 @@
+footer{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.social{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 175px;
+}
+footer .logo{
+    color: #323a45;
+    margin: 0;
+}
+.footer__subtitle{
+    color: #81868e;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+.fb{
+    background: url(../img/fb-base.png);
+}
+.tw{
+    background: url(../img/tw-base.png);
+}
+.in{
+    background: url(../img/in-base.png);
+}
+.inst{
+    background: url(../img/inst-base.png);
+}
+.v{
+    background: url(../img/v-base.png);
+}
+.base{
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
