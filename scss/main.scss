@@ -72,7 +72,7 @@ section {
     }  
      
     .circle__button {                        
-        border-radius: 50%;
+        border-radius: 50%;  
         background-color: #81868e; 
         width: 53px;
         height: 53px;
@@ -80,7 +80,7 @@ section {
         justify-content: center;
         align-items: center;
         outline: none;
-
+  
         &:hover { 
             background-color: rgb(25, 189, 154);
         .heart {
@@ -96,8 +96,9 @@ section {
     }
     .c-active{
       background-color: rgb(25, 189, 154);
-        }                         
-}                                                                                                                          
-                                         
+        }                          
+}                                                                                                                                                 
+                                                                                                    
                                    
-                          
+                           
+               

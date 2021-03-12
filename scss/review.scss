@@ -12,15 +12,24 @@
 .review__item{
     display: none;
     
-}
-.review__item--active{
-    display: flex;
+&--active{
     justify-content: space-between;
+    animation-name: text-appearence;
+    animation-duration: 1.5s;
+    display: flex;
+    
+    }
 }
 .review__item__text{
     max-width: 760px;
+    letter-spacing: 0.05em;
 }
 .review__item__img{
+    border-radius: 50%;
+    border: 1px solid transparent;
+    width: 141px;
+    height: 141px;
+    overflow: hidden;
     object-fit: cover;
 }
 .review__description{
@@ -38,12 +47,21 @@
     text-transform: uppercase;
     font-size: 14px;
 }
-.review__switcher__item{
+.review__switcher{
     background: url(../img/team__circle.png);
     width: 10px;
     height: 10px;
     margin-left: 15px;
+    &:hover{
+        background: url(../img/team__circle-active.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    
+    }
 }
-.review__switcher--item-active{
+.review__switcher--active{
     background: url(../img/team__circle-active.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform:scale(1.4);
 }

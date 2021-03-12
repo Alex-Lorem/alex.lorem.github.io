@@ -2,10 +2,20 @@
   display: none;
   padding: 4% 12%
 }
-.details__item-active{
+.details__item--active{
+  animation-name: text-appearence;
+  animation-duration: 1.5s;
   display: block;
 }
-.details__item-text{
+@keyframes text-appearence{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.details__item__text{
   display: flex;
 }
 .txt__left{

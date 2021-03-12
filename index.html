@@ -19,8 +19,11 @@
         <h1 class="first__title">we are code cafe</h1>
         <div class="first__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</div>
         <div class="first__anim">
-        <a href="" class="first_arrow"><svg><use xlink:href="sprite.svg#ellipse"></use></svg></a>
-        <a href="" class="arrow_svg"><svg class="arrow_down" viewBox="0 0 451.847 451.847"><use xlink:href="sprite.svg#arrow_down"></use></svg></a>
+        <a href="" class="first_arrow">
+        <svg id="ellipse"><use xlink:href="sprite.svg#ellipse"></use></svg>
+        <svg class="arrow_down" viewBox="0 0 451.847 451.847"><use xlink:href="sprite.svg#arrow_down"></use></svg>
+        </a>
+        
         </div>
 
 
@@ -41,34 +44,34 @@
             <h2 class="title">details about bouncy</h2>
             <div class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div>
             <div class="buttons-wrapper">
-                <button class="circle__button c-active"><div class="heart"></div></button>
-                <button class="circle__button"><div class="mouse"></div></button>
-                <button class="circle__button"><div class="lamp"></div></button>
+                <button class="circle__button c-active" data-open="one"><div class="heart"></div></button>
+                <button class="circle__button" data-open="two"><div class="mouse"></div></button>
+                <button class="circle__button" data-open="three"><div class="lamp"></div></button>
             </div>
-            <div class="details__item details__item-active">
+            <div class="details__item details__item--active" data-linked-with="one">
                 <h3>Creative Ideas</h3>
-                <div class="details__item-text">
+                <div class="details__item__text">
                     <div class="txt__left" >At <span>vero</span> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores </div>
                     <div class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem</div>
                 </div>
             </div>
-            <div class="details__item">
+            <div class="details__item" data-linked-with="two">
                 <h3>Human Revolution</h3>
-                <div class="details__item-text">
+                <div class="details__item__text">
                     <div class="txt__left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid ducimus nulla odit, quidem repudiandae tempore? Ipsa nam velit voluptatibus?</div>
                     <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aut autem commodi consequatur dicta distinctio, dolorem ea eligendi et eveniet excepturi facere illo impedit iure maxime minima modi molestias natus, neque odit officia pariatur, placeat rerum saepe sint sit vero vitae voluptate voluptatum. Minus!</div>
                 </div>
             </div>
-            <div class="details__item">
+            <div class="details__item" data-linked-with="three">
                 <h3>Logical Inspiration</h3>
-                <div class="details__item-text">
+                <div class="details__item__text">
                     <div class="txt__left">Here you can find activities to practise your reading skills. Reading will help you to improve your understanding of the language and build your vocabulary.</div>
                     <div class="description">The self-study lessons in this section are written and organised according to the levels of the Common European Framework of Reference for languages (CEFR). There are different types of texts and interactive exercises that practise the reading skills you need to do well in your studies.</div>
                 </div>
             </div>
             <div class="details__footer">
                 <div class="details__footer-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis </div>
-                <div class="button">Submit Now</div>
+                <div class="button" id="details_submit">Submit Now</div>
             </div>
         </div>
     </section>
@@ -76,18 +79,19 @@
         
             <h2 class="title">our services</h2>
             <div class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div>
+            
             <div class="service__container-1">
                 <div class="service__left">
                    <div class="service__buttons">
-                       <button class="circle__button"><div class="tool"></div></button>
-                       <button class="circle__button c-active"><div class="design"></div></button>
-                       <button class="circle__button"><div class="gamepad"></div></button>
-                       <button class="circle__button"><div class="cable"></div></button>
+                       <button class="service__button" data-open="p-one"><div class="tool"></div></button>
+                       <button class="service__button service__button--active" data-open="p-two"><div class="design"></div></button>
+                       <button class="service__button" data-open="p-three"><div class="gamepad"></div></button>
+                       <button class="service__button" data-open="p-four"><div class="cable"></div></button>
                    </div>
-                    <div class="service__item "><h3>Sympathethic Tools</h3><div class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut deleniti minima nemo nulla saepe! A aliquid blanditiis commodi consectetur culpa cumque dicta distinctio, dolore doloribus dolorum eius eos <p>excepturi, expedita fugiat in ipsa magnam maiores minus necessitatibus obcaecati officiis quaerat similique vero voluptatem voluptatibus. Deserunt dolores ipsa itaque quibusdam recusandae.</div></div>
-                    <div class="service__item service__item-active"><h3>Graphic Design</h3><div class="service-text">At vero eos et accusamus et <span>iusto</span> odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti <p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div></div>
-                    <div class="service__item "><h3>Nuclear UI/UX</h3><div class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa debitis ducimus enim eos excepturi id incidunt ipsam<p> Ipsum necessitatibus odio perspiciatis quas qui repellendus reprehenderit sunt vel vero voluptate voluptatibus?</div></div>
-                    <div class="service__item "><h3>Gorgeous BBC </h3><div class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, asperiores aspernatur dolor eos est iure odit repudiandae ut veniam voluptas!</div></div>
+                    <div class="service__item" data-linked-with="p-one"><h3>Sympathethic Tools</h3><div class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut deleniti minima nemo nulla saepe! A aliquid blanditiis commodi consectetur culpa cumque dicta distinctio, dolore doloribus dolorum eius eos <p>excepturi, expedita fugiat in ipsa magnam maiores minus necessitatibus obcaecati officiis quaerat similique vero voluptatem voluptatibus. Deserunt dolores ipsa itaque quibusdam recusandae.</div></div>
+                    <div class="service__item service__item--active" data-linked-with="p-two"><h3>Graphic Design</h3><div class="service-text">At vero eos et accusamus et <span>iusto</span> odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti <p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div></div>
+                    <div class="service__item " data-linked-with="p-three"><h3>Nuclear UI/UX</h3><div class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa debitis ducimus enim eos excepturi id incidunt ipsam<p> Ipsum necessitatibus odio perspiciatis quas qui repellendus reprehenderit sunt vel vero voluptate voluptatibus?</div></div>
+                    <div class="service__item " data-linked-with="p-four"><h3>Gorgeous BBC </h3><div class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, asperiores aspernatur dolor eos est iure odit repudiandae ut veniam voluptas!</div></div>
                 </div>
                 <div class="service__right">
                     <div class="service__circle"><div class="default-circle"><div class="branding-img"></div>80<span class="procent">%</span></div><div class="service__subtitle">Branding</div></div>
@@ -112,52 +116,52 @@
         <div class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div>
         <div class="portfolio__container">
             <div class="btn-wrapper">
-                <a href="" class="portfolio__button portfolio__button--active">All Works</a>
-                <a href="" class="portfolio__button">Print</a>
-                <a href="" class="portfolio__button">Identity</a>
-                <a href="" class="portfolio__button">Branding</a>
-                <a href="" class="portfolio__button">Web</a>
-                <a href="" class="portfolio__button">HTML</a>
-                <a href="" class="portfolio__button">Wordpress</a>
+                <a href="" class="portfolio__button portfolio__button--active" data-filter="all" id="allworks">All Works</a>
+                <a href="" class="portfolio__button" data-filter="print" id="print">Print</a>
+                <a href="" class="portfolio__button" id="identity">Identity</a>
+                <a href="" class="portfolio__button" id="branding">Branding</a>
+                <a href="" class="portfolio__button" id="web">Web</a>
+                <a href="" class="portfolio__button" id="html">HTML</a>
+                <a href="" class="portfolio__button" id="wordpress">Wordpress</a>
             </div>
             <div class="portfolio__works">
-                <div class="portfolio__item">
-                <div class="img-cover">
-                <img class="portfolio__img" src="./img/works/work_1.png" alt=""></div>
+                <div class="mix all branding html portfolio__item">
+                <img class="portfolio__img" src="./img/works/work_1.png" alt="">
                 <div class="hidden"><div class="hidden__title">title here</div>
                 <div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div>     </div>
                 </div>
-                <div class="portfolio__item">
+                <div class="mix all print web wordpress portfolio__item ">
                 <img class="portfolio__img" src="./img/works/work_2.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
-                <div class="portfolio__item">
+                <div class="mix all print html portfolio__item">
                 <img class="portfolio__img" src="./img/works/work_3.png" alt="">
                 <div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
-                <div class="portfolio__item">
+                <div class="mix all identity html portfolio__item">
                 <img class="portfolio__img" src="./img/works/work_4.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
-                <div class="portfolio__item"><img class="portfolio__img"  src="./img/works/work_5.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
-                <div class="portfolio__item"><img class="portfolio__img"  src="./img/works/work_6.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
-                <div class="portfolio__item"><img class="portfolio__img" src="./img/works/work_7.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
-                <div class="portfolio__item"><img class="portfolio__img"  src="./img/works/work_8.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
-                <div class="portfolio__item"><img class="portfolio__img"  src="./img/works/work_9.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
-                <div class="portfolio__item"><img class="portfolio__img"  src="./img/works/work_10.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
-                <div class="portfolio__item"><img class="portfolio__img"  src="./img/works/work_11.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
-                <div class="portfolio__item"><img src="./img/works/work_12.png" class="portfolio__img" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
+                <div class="mix all identity wordpress branding portfolio__item"><img class="portfolio__img"  src="./img/works/work_5.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
+                <div class="mix all identity portfolio__item" ><img class="portfolio__img"  src="./img/works/work_6.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
+                <div class="mix all print web portfolio__item" data-order="3","6"><img class="portfolio__img" src="./img/works/work_7.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
+                <div class="mix all wordpress web portfolio__item" data-order="2"><img class="portfolio__img"  src="./img/works/work_8.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
+                <div class="mix all branding portfolio__item" data-order="3"><img class="portfolio__img"  src="./img/works/work_9.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
+                <div class="mix all html  wordpress portfolio__item" data-order="4","1"><img class="portfolio__img"  src="./img/works/work_10.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
+                <div class="mix all print branding portfolio__item" data-order="1","3","4"><img class="portfolio__img"  src="./img/works/work_11.png" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
+                <div class="mix all identity web portfolio__item" data-order="2","6"><img src="./img/works/work_12.png" class="portfolio__img" alt=""><div class="hidden"><div class="hidden__title">title here</div><div class="hidden__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div></div></div>
             </div>
         </div>
         <div class="portfolio__footer">
             <div class="portfolio__footer__title">
                 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
             </div>
-            <div class="button">Start Project</div>
+            <div class="button" id="portfolio__form">Start Project</div>
         </div>
     </section>
     <section class="team">
         <h2 class="title">the team</h2>
         <div class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div>
         <div class="team__container">
-            <div class="team__item team__item--active">
-                <div class="team--img-1">
-                <img src="./img/abdullah.png" alt=""></div>
+            <div class="team__item team__item--active" data-linked-with="t-one">
+                <div class="team__img">
+                <img src="./img/abdullah.png" alt="">
+                </div>
                 <div class="team__item-right">
                     <div class="team__name">Abdullah Noman</div>
                     <div class="team__career">Creative Director, Code Cafe</div>
@@ -184,9 +188,9 @@
                             </div>
                         </div>
                 </div>
-            <div class="team__item">
-                <div class="team--img-1">
-                <img src="./img/abdullah.png" alt=""></div>
+            <div class="team__item" data-linked-with="t-two">
+                <div class="team__img">
+                <img src="./img/dima.jpg" alt="" class="img"></div>
                 <div class="team__item-right">
                     <div class="team__name">Jack Jonson</div>
                     <div class="team__career">Web Designer, Code Cafe</div>
@@ -201,11 +205,11 @@
                             <div class="lvl__item">
                                 <span class="lvl__item--left">web design</span> <span class="lvl__item-procent">95%</span>
                                 <div class="lvl__line">
-                                    <div class="lvl__line-web"></div>
+                                    <div class="lvl__line-web-2"></div>
                                         </div>
                                     </div>
                             <div class="lvl__item">
-                            <span class="lvl__item--left">user interface</span> <span class="lvl__item-procent-2">65%</span>
+                            <span class="lvl__item--left">user interface</span> <span class="lvl__item-procent">65%</span>
                             <div class="lvl__line">
                                 <div class="lvl__line-ui-2"></div>
                                 </div>
@@ -213,9 +217,9 @@
                             </div>
                         </div>
                 </div>
-                <div class="team__item">
-                <div class="team--img-1">
-                <img src="./img/abdullah.png" alt=""></div>
+                <div class="team__item" data-linked-with="t-three">
+                <div class="team__img">
+                <img src="./img/sierra.jpg" alt="" class="img"></div>
                 <div class="team__item-right">
                     <div class="team__name">Siera Calvin</div>
                     <div class="team__career">Branding Manager, Code Cafe</div>
@@ -245,20 +249,20 @@
             
             
         <div class="switcher__container">
-            <button class="team__item__switcher switcher--active"></button>
-            <button class="team__item__switcher"></button>
-            <button class="team__item__switcher"></button>
+            <button class="team__switcher team__switcher--active" data-open="t-one"></button>
+            <button class="team__switcher" data-open="t-two"></button>
+            <button class="team__switcher" data-open="t-three"></button>
         </div>
         <div class="team__footer">
             <div class="team__footer--title">Already Loved us? Let's talk!</div>
-            <div class="button">Contact Us</div>
+            <div class="button">Contact Us<a href="tel:+380665712861" class="num">0665712861</a></div>
         </div>
     </section>
     <section class="reviews">
         <h2 class="title">testimonials</h2>
         <div class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div>
         <div class="review__container">
-            <div class="review__item review__item--active">
+            <div class="review__item review__item--active" data-linked-with="r-one">
                 <div class="review__item__img"><img src="./img/reviewer-1.png" alt=""></div>
                 <div class="review__item__text">
                     <div class="review__description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.</div>
@@ -266,15 +270,16 @@
                     <div class="review__job">founder, artways bd</div>
                 </div>
             </div>
-            <div class="review__item">
-                <div class="review__item__img"><img src="" alt=""></div>
+            <div class="review__item" data-linked-with="r-two">
+                <div class="review__item__img"><img src="./img/ashot.jpeg" alt=""></div>
                 <div class="review__item__text">
                     <div class="review__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum accusamus debitis, culpa quam saepe perferendis adipisci, necessitatibus animi! Dignissimos velit, vero sed odit incidunt iusto consequuntur excepturi facere veritatis nesciunt aspernatur minima, reprehenderit ab at explicabo! A, minus quaerat. Alias illum officia ex quod ducimus?</div>
                     <div class="review__name">Agata Cristie</div>
                     <div class="review__job">writer, waiter</div>
                 </div>
-            </div><div class="review__item">
-                <div class="review__item__img"><img src="" alt=""></div>
+            </div>
+               <div class="review__item" data-linked-with="r-three">
+                <div class="review__item__img"><img src="./img/portie.jpg" alt=""></div>
                 <div class="review__item__text">
                     <div class="review__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ratione impedit aperiam blanditiis reiciendis, doloremque explicabo laboriosam, temporibus quibusdam ab reprehenderit aspernatur eos perspiciatis tempore, rem nesciunt ipsum repudiandae voluptatibus odit. Mollitia itaque provident nobis quas sit. Error suscipit, est, nostrum eius asperiores veritatis rem voluptas aspernatur ex, itaque maxime. Perferendis esse facilis quam sequi, adipisci cumque saepe dignissimos consectetur!</div>
                     <div class="review__name">Portie</div>
@@ -283,9 +288,9 @@
             </div>
             
             <div class="switcher__container">
-                <button class="review__switcher__item review__switcher--item-active"></button>
-                <button class="review__switcher__item"></button>
-                <button class="review__switcher__item"></button>
+                <button class="review__switcher review__switcher--active" data-open="r-one"></button>
+                <button class="review__switcher" data-open="r-two"></button>
+                <button class="review__switcher" data-open="r-three"></button>
             </div>
         </div>
         
@@ -393,7 +398,13 @@ Bangladesh</div></div></div>
         </div>
     </footer>
 </div>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript">
+    </script>
+-->
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
 

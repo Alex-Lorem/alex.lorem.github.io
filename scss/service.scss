@@ -1,9 +1,30 @@
 .service {
     background-color: #f3f3f3;
 }
+.service__button {                        
+        border-radius: 50%;
+        background-color: #81868e; 
+        width: 53px;
+        height: 53px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+    &--active{
+        background-color: rgb(25, 189, 154);
+    }
+    &:hover{
+        background-color: rgb(25, 189, 154);
+    }
+}
+.mixitup-control-active{
+    display: block;
+}
 .service__item {
   display: none;
-  &-active {
+  &--active {
+    animation-name: text-appearence;
+    animation-duration: 1.5s;
     display: block;
   }
 }

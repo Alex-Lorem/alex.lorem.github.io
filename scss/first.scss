@@ -24,9 +24,17 @@
 }
 .first_arrow{
   display: block;
+  width: 36px;
+  height: 36px;
+}
+#ellipse{
+    &:hover{
+        filter: sepia(1);
+    }
 }
 .arrow_down{
-  transform: translate(0px, -4px);
+  transform: translate(0px, -32px);
+  fill: #fff;
   width: 10px;
   height: 11px;
 }
