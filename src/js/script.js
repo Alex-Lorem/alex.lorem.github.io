@@ -1,0 +1,281 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+    
+    //animation down
+    
+    let arrow = document.querySelector(".first_arrow");
+    arrow.addEventListener("click", e =>{
+        
+    e.preventDefault();
+        
+    $('html,body').animate({scrollTop:document.querySelector(".first").scrollHeight},1000);
+    });
+    
+    //details
+    
+    const $findBlock = (allies) =>{
+    return $(".details__item").filter((index, item)=>{
+       return $(item).attr("data-linked-with") == allies; 
+    });
+}
+$(".circle__button").click(e =>{ 
+    e.preventDefault();
+    const $this = $(e.currentTarget)   
+    const target = $this.attr("data-open");
+    const itemToShow =  $findBlock(target);
+    const curItem = $this.closest(".circle__button");
+    itemToShow.addClass("details__item--active").siblings().removeClass("details__item--active");
+    curItem.addClass("c-active").siblings().removeClass("c-active");
+});
+    
+    //details submit
+    
+     
+     $("#details_submit").click(e =>{
+         
+        e.preventDefault();
+       
+     let heightSum =
+        document.querySelector(".first").scrollHeight + 
+        document.querySelector(".about").scrollHeight + 
+        document.querySelector(".details").scrollHeight + 
+        document.querySelector(".service").scrollHeight + document.querySelector(".portfolio").scrollHeight + document.querySelector(".team").scrollHeight + document.querySelector(".reviews").scrollHeight + document.querySelector(".price").scrollHeight * 0.4;                                                
+
+     $('html,body').animate({scrollTop:heightSum},1000);
+    });
+
+    //service
+    
+    const $findBlocks = (allies) =>{
+    return $(".service__item").filter((index, item)=>{
+       return $(item).attr("data-linked-with") == allies; 
+    });
+}
+$(".service__button").click(e =>{ 
+    e.preventDefault();
+    const $this = $(e.currentTarget)   
+    const target = $this.attr("data-open");
+    const itemToShow =  $findBlocks(target);
+    const curItem = $this.closest(".service__button");
+    itemToShow.addClass("service__item--active").siblings().removeClass("service__item--active");
+    curItem.addClass("service__button--active").siblings().removeClass("service__button--active");
+});
+    
+    //portfolio
+    
+        //animations :  'fade translateX(-100%)'
+        // 'fade rotateZ(-180deg)'
+    
+        
+        var mixer = mixitup($(".portfolio__works"), {
+                animation: {
+                    effectsIn: 'fade translateY(-100%)',
+                    duration: 700
+                    }
+            });
+    
+        $("#allworks").click(e =>{ 
+                e.preventDefault();
+                $("#allworks").addClass("portfolio__button--active").siblings().removeClass("portfolio__button--active");
+                mixer.filter('.all');
+                
+         });
+        $("#print").click(e =>{ 
+                e.preventDefault();
+                $("#print").addClass("portfolio__button--active").siblings().removeClass("portfolio__button--active");
+                mixer.filter('.print');
+ 
+         });   
+        $("#identity").click(e =>{ 
+                e.preventDefault();
+                $("#identity").addClass("portfolio__button--active").siblings().removeClass("portfolio__button--active");
+                mixer.filter('.identity');
+ 
+         });   
+        $("#branding").click(e =>{ 
+                e.preventDefault();
+                $("#branding").addClass("portfolio__button--active").siblings().removeClass("portfolio__button--active");
+                mixer.filter('.branding');
+ 
+         });   
+        $("#web").click(e =>{ 
+                e.preventDefault();
+                $("#web").addClass("portfolio__button--active").siblings().removeClass("portfolio__button--active");
+                mixer.filter('.web');
+ 
+         });   
+        $("#html").click(e =>{ 
+                e.preventDefault();
+                $("#html").addClass("portfolio__button--active").siblings().removeClass("portfolio__button--active");
+                mixer.filter('.html');
+ 
+         });   
+        $("#wordpress").click(e =>{ 
+                e.preventDefault();
+                $("#wordpress").addClass("portfolio__button--active").siblings().removeClass("portfolio__button--active");
+                mixer.filter('.wordpress');
+ 
+         });    
+    
+    //portfolio form
+    
+    $("#portfolio__form").click(e =>{
+        
+    e.preventDefault();
+        
+    $('html,body').animate({scrollTop:document.body.scrollHeight},1000);
+        
+    });
+    
+    //team
+    
+    const $findWorkers = (allies) =>{
+    return $(".team__item").filter((index, item)=>{
+       return $(item).attr("data-linked-with") == allies; 
+    });
+}
+$(".team__switcher").click(e =>{ 
+    e.preventDefault();
+    const $this = $(e.currentTarget)   
+    const target = $this.attr("data-open");
+    const itemToShow =  $findWorkers(target);
+    const curItem = $this.closest(".team__switcher");
+    itemToShow.addClass("team__item--active").siblings().removeClass("team__item--active");
+    curItem.addClass("team__switcher--active").siblings().removeClass("team__switcher--active");
+    
+});   
+    
+    
+    //review
+
+    const $findReviewers = (allies) =>{
+    return $(".review__item").filter((index, item)=>{
+       return $(item).attr("data-linked-with") == allies; 
+    });
+}
+$(".review__switcher").click(e =>{ 
+    e.preventDefault();
+    const $this = $(e.currentTarget)   
+    const target = $this.attr("data-open");
+    const itemToShow =  $findReviewers(target);
+    const curItem = $this.closest(".review__switcher");
+    itemToShow.addClass("review__item--active").siblings().removeClass("review__item--active");
+    curItem.addClass("review__switcher--active").siblings().removeClass("review__switcher--active");
+});
+    
+    
+     
+
+
+    
+    
+    //contact   document.getElementsByTagName("footer").scrollHeight -
+    
+    $("#contact").click(e =>{
+        
+    e.preventDefault();
+   
+    let height = 
+        document.querySelector(".first").scrollHeight + 
+        document.querySelector(".about").scrollHeight + 
+        document.querySelector(".details").scrollHeight +
+        document.querySelector(".details__footer").scrollHeight +
+        document.querySelector(".service").scrollHeight + document.querySelector(".portfolio").scrollHeight + document.querySelector(".team").scrollHeight + document.querySelector(".team__footer").scrollHeight +
+        document.querySelector(".reviews").scrollHeight +
+        document.querySelector(".price").scrollHeight;
+    
+    $('html,body').animate({scrollTop:height},1000);
+        
+    });
+    
+    //form
+    
+  const body = document.querySelector('body');
+  const myForm = document.querySelector('#myForm');
+  const sendBtn = document.querySelector('#send');
+  const modal = document.querySelector('#modal');
+  const modalText = document.querySelector('#modalText');
+
+  sendBtn.addEventListener('click', sendForm);
+  modal.addEventListener('click', closePopup);
+
+  function sendForm(e) {
+    e.preventDefault();
+
+    if(validateForm(myForm)) {
+           console.log('валидация прошла!');
+
+          let data = new FormData();
+          data.append("name", myForm.elements.name.value);
+          data.append("phone", myForm.elements.phone.value);
+          data.append("comment", myForm.elements.comment.value);
+          data.append("subject", myForm.elements.subject.value);
+          data.append("to", "my@mail.ru");
+          const xhr = new XMLHttpRequest();
+
+          xhr.responseType = 'json';
+          xhr.open('POST','https://webdev-api.loftschool.com/sendmail');
+          xhr.send(data);
+          xhr.addEventListener('load', () => {
+            modal.classList.add('active');
+            body.classList.add('locked');
+            if(xhr.response.status === 0) {
+              modalText.innerText = xhr.response.message;
+            } else {
+              modalText.innerText = xhr.response.message;
+            }
+          })
+    }
+  }
+
+  function validateForm(form) {
+    let valid = true;
+
+    if(!validateField(form.elements.name)) {
+      valid = false;
+    }
+
+    if(!validateField(form.elements.phone)) {
+      valid = false;
+    }
+
+    if(!validateField(form.elements.comment)) {
+      valid = false;
+    }
+
+    return valid;
+  }
+
+  function  validateField(field) {
+    if(!field.checkValidity()) {
+      field.nextElementSibling.textContent = field.validationMessage;
+      return false;
+    } else {
+      field.nextElementSibling.textContent = '';
+      return true;
+    }
+  }
+
+  function closePopup(e) {
+    e.preventDefault();
+    modal.classList.remove('active');
+    body.classList.remove('locked');
+  }
+
+
+    
+    
+    
+});//"DOMContentLoaded"
+
+
+
+
+
+
+
+
+
+
+
+
+
