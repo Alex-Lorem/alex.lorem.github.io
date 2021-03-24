@@ -1,6 +1,7 @@
 .details__item{
   display: none;
-  padding: 4% 12%
+  padding: 35px 0;
+  min-height: 400px;
 }
 .details__item--active{
   animation-name: text-appearence;
@@ -17,45 +18,54 @@
 }
 .details__item__text{
   display: flex;
+    @include tablets{
+        flex-direction: column;
+    }
 }
 .txt__left{
-  min-width: 200px;
-  font-size:16px;
-  color: #81868E;
-  letter-spacing: 0.1em;
-  line-height: 1.8;
+    min-width: 265px;
+    max-width: 335px;
+    font-size: 1rem;
+    color: #81868E;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
 }
 .details__item .description{
-  padding: 0;
-  margin: 0% 6%;
-  max-width: 520px;
-  font-size: 16px;
-  color: #81868E;
-  letter-spacing: 0.1em;
-  line-height: 1.8;
+    padding: 0;
+    margin-left: 40px;
+    max-width: 550px;
+    font-size: 1rem;
+    color: #81868E;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+    @include tablets{
+        margin: 0;
+        margin-top: 15px;
+    }
+    
 }
-.details__footer{
-  display: flex;
-  align-items: center;
-}
+
 .details__content .button{
   margin: 0;
 }
 .details__footer-text{
-
+  margin-left: 10px;
   font-size: 20px;
   color: white;
+  @include font_decreasing {
+        font-size: 1rem;
+    }
 }
 .details__footer{
   display: flex;
+  align-items: center;
+  padding: 0 calc(50% - 500px); 
   width: 100%;
   height: 112px;
   background: url(../img/details_footer.png);
-  align-items: center;
-  justify-content: space-evenly;;
-  padding: 0 5%;
+  justify-content: space-evenly;
   .button{
-
+    margin-right: 10px;
     @keyframes btn_reverse_text {
       0%{letter-spacing:-0.1em;}
       50%{letter-spacing: 0.26em;}
@@ -67,14 +77,19 @@
       animation-name: btn_reverse_text;
       animation-duration: 2.5s;
       animation-iteration-count: infinite;
+        @include tablets{
+            animation-duration: 0s;
+        }
     }
   }
+    
 }
 .details__content{
   
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 15px;
 }
 .details{
     background-color: #f3f3f3;
@@ -97,7 +112,13 @@
   left: 0%;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-
+    @include tablets{
+        width: 1.733rem;
+        height: 1.466rem;
+    }  @include phones{
+        width: 1.857rem;
+        height: 1.5714rem;
+    } 
 }
 @keyframes turning_heart {
   33%{top: 17%;left: 17%;}
@@ -113,6 +134,14 @@
   left: 0%;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+    @include tablets{
+        width: 1.066rem;
+        height: 2rem;
+    }
+    @include phones{
+        width: 1.142rem;
+        height: 2.142rem;
+    }
 }
 .lamp{
   background: url(../img/lamp.png) no-repeat;
@@ -123,4 +152,12 @@
   left: 0%;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+    @include tablets{
+        width: 1.33rem;
+        height: 2rem;
+    }
+    @include phones{
+        width: 1.428rem;
+        height: 2.142rem;
+    }
 }

@@ -1,5 +1,6 @@
+
 .first{
-  height: 737px;
+  height: 100vh;
   background: url(../img/background.png) 50% 50% no-repeat;
   text-align: center;
   display: flex;
@@ -7,6 +8,9 @@
   align-items: center;
   justify-content: center;
   background-size: cover;
+    @media(max-width:850px){
+            background-position-x: 30%;
+    }
 }
 .first__title{
   padding-left: 7px;
@@ -21,11 +25,18 @@
   margin-top: 20px;
   padding: 0 30%;
   color: white;
+    @include tablets{
+        padding: 0 20%;
+    }
 }
 .first_arrow{
   display: block;
-  width: 36px;
+  width: 36px; 
   height: 36px;
+    @include tablets{ 
+        width: 2.4rem; 
+        height: 2.4rem;
+    }
 }
 #ellipse{
     &:hover{
@@ -37,6 +48,11 @@
   fill: #fff;
   width: 10px;
   height: 11px;
+    @include tablets{ 
+        width: 0.66rem; 
+        height: 0.73rem;
+        transform: translate(0px, -30px);
+    }
 }
 .arrow_svg{
   position: relative;
@@ -51,6 +67,9 @@
   top: 30%;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+    @include tablets{ 
+        height: 2.4rem;
+    }
 
   @keyframes ani {
     50%{top:35%;}

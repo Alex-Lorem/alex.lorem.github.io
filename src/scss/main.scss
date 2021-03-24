@@ -1,8 +1,9 @@
-@import './scss/*.scss';                                                                      
-                                                                      
-          
-$baseFont: 16px;                                                      
+@import './scss/*.scss';  
+@import 'media';
+
+$baseFont: 16px;                 
 $baseFamily:"OpenSans-Regular";
+
 *{
     margin: 0; 
     padding: 0;
@@ -12,9 +13,18 @@ $baseFamily:"OpenSans-Regular";
 html{
     font-size: $baseFont;
     font-family: $baseFamily;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    @include tablets{
+        font-size: $baseFont - 1px;
+    }    
+    @include phones{
+        font-size: $baseFont - 2px; 
+    }
 }
-section {
+body{
+    background: #f3f3f3;
+}
+ section {
     padding: 0 calc(50% - 683px);}
      
     h2{
@@ -34,8 +44,10 @@ section {
         padding-bottom: 30px;
     }
     .subtitle{
+        width: 400px;
+        margin: 20px auto;
+        margin-bottom: 70px;
         text-align: center;
-        padding: 32px 32%;
         color: #81868e;  
     }
     .description{
@@ -66,10 +78,19 @@ section {
         background-color: transparent;
         cursor: pointer;
             
-    }   
+    }
+    ul, li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+   }
     svg{
         width: 36px; 
         height: 36px;
+        @include tablets{
+            width: 2.4rem; 
+            height: 2.4rem;
+        }
     }  
      
     .circle__button {                        
@@ -81,7 +102,15 @@ section {
         justify-content: center;
         align-items: center;
         outline: none;
-  
+        @include tablets{
+            width: 3.5333rem;
+            height: 3.5333rem;
+        }
+        @include phones{
+            width: 3.7855rem;
+            height: 3.7855rem;
+        }
+        
         &:hover { 
             background-color: rgb(25, 189, 154);
         .heart {

@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/Alex-Lorem/alex.lorem.github.io#readme",
   "dependencies": {
+    "gulp-imagemin": "^7.1.0",
+    "imagemin": "^7.0.1",
     "jquery": "^3.6.0"
   },
   "devDependencies": {
@@ -31,15 +33,23 @@
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-ext-replace": "^0.3.0",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-if": "^3.0.0",
+    "gulp-px222rem-plugin": "^3.1.0",
     "gulp-px2rem-converter": "^1.5.9",
+    "gulp-px2rem-plugin": "^0.4.0",
+    "gulp-px3rem": "^0.3.0",
+    "gulp-pxrem": "0.0.2",
     "gulp-rm": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sass-glob": "^1.1.0",
     "gulp-smile-px2rem": "^0.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "node-sass": "^5.0.0"
+    "gulp-webp": "^4.0.1",
+    "imagemin-webp": "^6.0.0",
+    "node-sass": "^5.0.0",
+    "px2rem": "^0.5.0"
   }
 }

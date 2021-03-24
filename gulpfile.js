@@ -13,15 +13,39 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const {SRC_PATH, DIST_PATH, FONTS_PATH, IMG_PATH, STYLE_LIBS, JS_LIBS} = require('./gulp.config');
 const gulpif = require('gulp-if');
-
 const env = process.env.NODE_ENV;
+const sourcemaps = require('gulp-sourcemaps');
+const imagemin = require("gulp-imagemin");
+const extReplace = require("gulp-ext-replace");
+const webp = require("imagemin-webp");
 
 sass.compiler = require('node-sass');
+
+
+
+
+task("img-convert", function() {
+  const stream = 
+    src('src/img/*.png','src/img/*.jpg','src/img/*.jpeg')
+    .pipe(
+      imagemin({
+        verbose: true,
+        plugins: webp({ quality: 92 })
+      })
+    )
+    .pipe(extReplace(".webp"))
+    .pipe(dest("./dist/img"));
+  return stream;
+});
+
+
+
+
+
 
 task(
     'clean',
     () => {
-    console.log(env);
     return src(`${DIST_PATH}/**/*`,{ read: false }).pipe(rm())
 })
 task(
@@ -50,6 +74,7 @@ task(
     'styles',
     () => {
         return src(STYLE_LIBS,{allowEmpty:true})
+        .pipe(gulpif(env === 'dev',sourcemaps.init()))
         .pipe(concat("main.min.scss"))
         .pipe(sassGlob())
         .pipe(sass().on("error", sass.logError))
@@ -60,6 +85,7 @@ task(
         })))
         .pipe(gulpif(env === 'prod', gcmq()))
         .pipe(gulpif(env === 'prod', cleanCSS()))
+        .pipe(gulpif(env === 'dev', sourcemaps.write()))
         .pipe(dest("dist"))
         .pipe(reload({ stream: true}));
 })
@@ -105,10 +131,10 @@ task(
 task('build',
  series(
    'clean',
-   parallel('copy:html',"copy:img", "copy:svg", "copy:fonts", 'styles', 'scripts'),'server')
+   parallel('copy:html', "copy:svg", 'copy:img', "copy:fonts", 'styles', 'scripts'),'server')
 );
 
-task("default", series("clean", parallel("copy:html", "copy:img", "copy:svg", "copy:fonts", "styles", "scripts"), parallel('watch',"server")));
+task("default", series("clean", parallel("copy:html", "copy:svg", "copy:img", "copy:fonts", "styles", "scripts"), parallel('watch',"server")));
 
 
 

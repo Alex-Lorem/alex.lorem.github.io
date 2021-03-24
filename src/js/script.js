@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-    
     //animation down
     
     let arrow = document.querySelector(".first_arrow");
@@ -9,6 +8,69 @@ document.addEventListener("DOMContentLoaded", function(event) {
         
     $('html,body').animate({scrollTop:document.querySelector(".first").scrollHeight},1000);
     });
+    
+    //nav_hello
+    
+    $('#nav_hello').click(e =>{
+     e.preventDefault();
+     $('html,body').animate({scrollTop:0},1000);
+    });
+    
+    $('#nav_about').click(e =>{
+     e.preventDefault();
+     $('html,body').animate({scrollTop:document.querySelector(".first").scrollHeight},
+    1000);
+    });
+    
+    $('#nav_service').click(e =>{
+     e.preventDefault(); 
+     const height = document.querySelector(".first").scrollHeight + document.querySelector(".about").scrollHeight + document.querySelector(".details").scrollHeight + document.querySelector(".details__footer").scrollHeight;   
+     $('html,body').animate({scrollTop:height},1000);
+    });
+    
+    $('#nav_portfolio').click(e =>{
+     e.preventDefault(); 
+     const height = document.querySelector(".first").scrollHeight + document.querySelector(".about").scrollHeight + document.querySelector(".details").scrollHeight + document.querySelector(".details__footer").scrollHeight +
+     document.querySelector(".service").scrollHeight;   
+     $('html,body').animate({scrollTop:height},1000);
+    });
+    
+    $('#nav_team').click(e =>{
+     e.preventDefault(); 
+     const height = document.querySelector(".first").scrollHeight + document.querySelector(".about").scrollHeight + document.querySelector(".details").scrollHeight + document.querySelector(".details__footer").scrollHeight +
+     document.querySelector(".service").scrollHeight +
+     document.querySelector(".portfolio").scrollHeight;   
+     $('html,body').animate({scrollTop:height},1000);
+    });
+    
+    $('#nav_reviews').click(e =>{
+     e.preventDefault(); 
+     const footer_margin = parseInt($('.team__footer').css('margin-top'));
+     const height = document.querySelector(".first").scrollHeight + document.querySelector(".about").scrollHeight + document.querySelector(".details").scrollHeight + document.querySelector(".details__footer").scrollHeight +
+     document.querySelector(".service").scrollHeight +
+     document.querySelector(".portfolio").scrollHeight +   
+     document.querySelector(".team__footer").scrollHeight +   
+     document.querySelector(".team").scrollHeight + footer_margin;   
+     $('html,body').animate({scrollTop:height},1000);
+    });
+    
+    $('#nav_contact').click(e =>{
+     e.preventDefault();
+      const footer_margin = parseInt($('.team__footer').css('margin-top'));
+      const height = document.querySelector(".first").scrollHeight + document.querySelector(".about").scrollHeight + document.querySelector(".details").scrollHeight + document.querySelector(".details__footer").scrollHeight +
+      document.querySelector(".service").scrollHeight +
+      document.querySelector(".portfolio").scrollHeight +   
+      document.querySelector(".team__footer").scrollHeight +   
+      document.querySelector(".team").scrollHeight + 
+      document.querySelector(".price").scrollHeight + 
+      document.querySelector(".reviews").scrollHeight + footer_margin;
+           
+     $('html,body').animate({scrollTop:height},2000);
+     });
+    
+    
+    
+    
     
     //details
     
@@ -62,16 +124,46 @@ $(".service__button").click(e =>{
     
     //portfolio
     
-        //animations :  'fade translateX(-100%)'
+        //animations :  'fade translateY(-100%)'
         // 'fade rotateZ(-180deg)'
     
         
         var mixer = mixitup($(".portfolio__works"), {
                 animation: {
-                    effectsIn: 'fade translateY(-100%)',
-                    duration: 700
+                    effectsOut: 'fade translateX(100%)',
+                    queue: true,
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    animateResizeContainer: false
+                    
                     }
+                
             });
+    
+        
+  function windowSize() {
+  windowHeight = window.innerHeight ? window.innerHeight : $(window).height();
+  windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
+
+}
+
+//Init Function of init it wherever you like...
+windowSize();
+
+// For example, get window size on window resize
+$(window).resize(function() {
+  windowSize();
+  if (windowWidth >550 && windowWidth < 768) {
+     mixer.sort('default:desc');
+  } else{
+      mixer.sort('');
+  }
+});
+        
+       
+        
+        
+    
     
         $("#allworks").click(e =>{ 
                 e.preventDefault();
@@ -261,9 +353,83 @@ $(".review__switcher").click(e =>{
     body.classList.remove('locked');
   }
 
+    
+    
+    //map
+    
+    
+    
+    
+//    let map;
+//
+//function initMap() {
+//  map = new google.maps.Map(document.getElementById("map"), {
+//    center: { lat: -34.397, lng: 150.644 },
+//    zoom: 8,
+//  });
+//}
+    
+    
+    //burger
+    
+    window.onload=function(){
+let burger  = document.querySelector('.burger');
+let overlay = document.querySelector('.overlay');
+let body = document.querySelector('body');
 
+let links = document.querySelectorAll('.menu__link');
+
+links.forEach(function(element){
+  element.addEventListener('click' , toggleMenu);
+})
+
+function toggleMenu(){
+  burger.classList.toggle('burger--active');
+  overlay.classList.toggle('overlay--active');
+  body.classList.toggle('body--active-menu');
+}
+
+burger.addEventListener('click' , toggleMenu);
+        }
     
+    let stick = document.querySelector(".burger");
     
+    stick.addEventListener("click", e =>{
+        e.preventDefault();
+        
+        if($(".burger").hasClass("burger--active")){
+            
+        document.getElementById("line_1").animate([
+            
+          { transform: 'translate(-50%, -6px) rotate(-45deg)' },
+          { transform: 'translate(-50%, -50%) rotate(0deg)' },
+          {composite: 'accumulate'}
+        ], {duration: 800}) 
+        document.getElementById("line_2").animate([
+            
+          { transform: 'translate(-50%, -50%) rotate(45deg)' },
+          { transform: 'translate(-50%, 10px) rotate(0deg)' }
+        
+        ], {duration: 800}) 
+        document.getElementById("line_3").animate([
+//          { top: '-100px' },
+//          { top: '20px' }
+          { left: '200px' },
+          { left: '50%' }
+        
+        ], {duration: 800})
+            
+        document.querySelector("overlay--active").animate([
+            
+           { top: '0px' },
+           { top: '-50%' }
+            
+        ],{duration: 1000})    
+            
+            
+        }
+    });
+
     
 });//"DOMContentLoaded"
 

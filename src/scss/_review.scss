@@ -1,18 +1,20 @@
 .reviews{
     background: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .review__container{
     background: #fff;
-    padding: 4% 7%;
+    padding: 40px calc(21% - 200px);
     max-width: 1150px;
-    margin: auto;
-    margin-top: 20px;
+    margin: 0 15px;
     
 }
 .review__item{
     display: none;
-    min-height: 250px;
-    
+    min-height: 210px;
+    padding: 0 10px;
 &--active{
     justify-content: space-between;
     animation-name: text-appearence;
@@ -20,10 +22,18 @@
     display: flex;
     
     }
+    @media(max-width:720px){
+        flex-direction: column;
+        align-items: center;
+    }
+    
 }
 .review__item__text{
-    max-width: 760px;
+    max-width: 77%;
     letter-spacing: 0.05em;
+    @media(max-width:720px){
+        text-align: center;
+    }
 }
 .review__img--wrapper{
     border-radius: 50%;
@@ -32,6 +42,7 @@
     height: 141px;
     overflow: hidden;
     object-fit: cover;
+    margin-bottom: 30px;
 }
 .review__img{
     width: 100%;
@@ -42,6 +53,7 @@
     color: #81868e;
     letter-spacing: 0.1em;
     line-height: 1.8;
+    text-align: justify;
 }
 .review__name{
     text-transform: uppercase;
@@ -64,10 +76,19 @@
         background-position: center;
     
     }
+    @include tablets{
+        width: 0.666rem;
+        height: 0.666rem;
+    }
+    @include phones{
+        width: 0.714rem;
+        height: 0.714rem;
+    }
 }
 .review__switcher--active{
     background: url(../img/team__circle-active.png);
     background-repeat: no-repeat;
     background-position: center;
     transform:scale(1.4);
+    
 }

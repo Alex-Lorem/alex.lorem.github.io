@@ -1,0 +1,119 @@
+.burger {
+        mix-blend-mode: difference;
+        position: fixed;
+        top: 3.6%;
+        right: 5%;
+        width: 2.46rem;
+        height: 2.46rem;
+        cursor: pointer;
+        transition: all 1s;
+        display: none;
+        z-index: 100;
+    
+    @media(max-width:1024px) {
+        display: block;
+    }
+      }
+      .burger__line {
+        display: block;
+        background-color: #fff;
+        width: 39px;
+        height: 2px;
+        position: absolute;
+        top: 62%;
+        left: 50%;     
+      }
+      .burger__line:nth-child(1) {
+        opacity: 1;
+        transform: translate(-50%, -22px);
+      }
+      .burger__line:nth-child(2) {
+        transform: translate(-50%, -6px) rotate(0deg);
+      }
+      .burger__line:nth-child(3) {
+        transform: translate(-50%, 10px) rotate(0deg);
+}  
+.burger--active{
+    top: 250px;
+      .burger__line:nth-child(1) {
+        opacity: 0;
+      }
+      .burger__line:nth-child(2) {
+          animation-name: stick_1;
+          animation-duration: .5s;
+          @keyframes stick_1{
+              0%{transform: translate(-50%, -6px) rotate(0deg);}
+              100%{transform: translate(-50%, -50%) rotate(-45deg);}
+          }
+          transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      .burger__line:nth-child(3) {
+          animation-name: stick_2;
+          animation-duration: .5s;
+          @keyframes stick_2{
+              0%{transform: translate(-50%, 10px) rotate(0deg);}
+              100%{transform: translate(-50%, -50%) rotate(45deg);}
+          }
+          transform: translate(-50%, -50%) rotate(45deg);
+      }
+} 
+
+
+
+.overlay{
+    color: white;
+    height: 35%;
+    width: 100%;
+    background-color: #343739;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+    position: fixed;
+    top: -50%;
+    left: 0;
+    opacity: 0;
+    z-index: 4;
+    
+    display: none;
+    
+    
+    @media(max-width:1024px) {
+        display: flex;
+    }
+    @media(max-width:768px) {
+        height: 30%;
+    }
+}
+.overlay--active{
+    top: 0;
+    opacity: 0.7;
+    display: flex;
+}
+.menu__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    @media(max-width:600px){
+        flex-direction: column;
+    }
+}
+.menu__item{
+
+}
+.menu__link{
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+
+

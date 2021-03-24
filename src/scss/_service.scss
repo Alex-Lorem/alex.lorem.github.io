@@ -17,12 +17,21 @@
     &:hover{
         background-color: rgb(25, 189, 154);
     }
+    @include tablets{
+            width: 3.5333rem;
+            height: 3.5333rem;
+        }
+        @include phones{
+            width: 3.7855rem;
+            height: 3.7855rem;
+        }
 }
 .mixitup-control-active{
     display: block;
 }
 .service__item {
   display: none;
+    margin-left: 20px;
   &--active {
     animation-name: text-appearence;
     animation-duration: 1.5s;
@@ -33,16 +42,40 @@
   background: url(../img/tool.png) no-repeat;
   width: 27px;
   height: 27px;
+    @include tablets{
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    @include phones{
+        width: 1.928rem;
+        height: 1.928rem;
+    }
   }
  .design{
   background: url(../img/design.png) no-repeat;
   width: 25px;
   height: 28px;
+     @include tablets{
+            width: 1.66rem;
+            height: 1.866rem;
+        }
+     @include phones{
+            width: 1.785rem;
+            height: 2rem;
+        }
   }
  .gamepad{
   background: url(../img/gamepad.png) no-repeat;
   width: 27px;
   height: 33px;
+     @include tablets{
+            width: 1.8rem;
+            height: 2.2rem;
+        }
+     @include phones{
+            width: 1.928rem;
+            height: 2.35rem;
+        }
   }
  .cable{
   background: url(../img/cable.png) no-repeat;
@@ -50,6 +83,14 @@
   height: 26px;
   position: relative;
   left: 5%;
+     @include tablets{
+            width: 1.66rem;
+            height: 1.733rem;
+        }
+     @include phones{
+            width: 1.785rem;
+            height: 1.85rem;
+        }
   }
 .service h3{
   padding-top: 20px;
@@ -65,28 +106,30 @@
 }
 .service__container-1{
     display: flex;
-    padding: 0 calc(50% - 683px);
+    padding: 10px;
 }
 .service__left{
     display: flex;
-    padding-left: 12.5%; 
+    padding-left: calc(37% - 300px);
+    padding-right: calc(25% - 300px);
 }
 .service__buttons{
     height: 265px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-right: 40px;
     margin-top: 26px;
+    
 }
 .service__right{
     flex: 1;
-    padding-top: 1%;
-    padding-left: 6%;
-    padding-right: 12%; 
     display: flex;
+    max-width: 450px;
     justify-content: space-between;
     align-items: center;
+    @include tablets{
+        flex-direction: column;
+    }
 }
 .default-circle{ 
     display: flex;
@@ -98,6 +141,10 @@
     align-items: center;
     justify-content: center;
     font-size: 25px;
+    @include tablets{
+        width: 8.6rem;
+        height: 8.6rem;
+    }
 }
 .branding-img{
     background-image: url(../img/circle_branding.png);
@@ -120,7 +167,7 @@
     position: absolute;
     width: inherit;
     height: inherit;
-    background-position: 20% 54.1%;;
+    background-position: 20% 54.1%;
 }
 .service__circle{
     text-align: center;
@@ -128,6 +175,10 @@
     align-items: center;
     flex-direction: column;
     color: #81868E;
+    @include tablets{
+        margin-top: 5px;
+        &:nth-child(1){margin-top: 0;}
+    }
     
 }
 .service__subtitle{
@@ -135,13 +186,20 @@
     position: relative;
     top: 18px;
     letter-spacing: 0.05em;
+    @include tablets{
+        top: 0;
+    }
 }
 .service__container-2{
     background: url(../img/man.png); 
     margin-top: 140px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-position-x: center;
+    @media(max-width:700px){
+        min-height: 240px;
+        margin: 0;
+    }
 }
 .procent{
     font-size: 14px;
@@ -155,14 +213,27 @@
     color: #f3f3f3;
     text-transform: uppercase;
 }
+.hidden-mac{
+    display: none;
+    @media(max-width:700px){
+        display: block;
+        margin: 0 auto;
+        transform: scale(1);
+    }
+}
 .mac{
     position: relative;
     top: -38px;
-    right: 98px;
+    width: 409px;
+    height: 329px;
+    margin-right: 15px;
+    @media(max-width:700px){
+        display: none;
+    }
 }
-.service__container-2__left{
+.service__container-2--left{
     padding-top: 22px;
-    padding-left: 5%;
+    margin-left: 1%;   
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -170,7 +241,7 @@
 }
 .service .description{
     padding: 0;
-    width: 600px;
+    max-width: 600px;
     font-size: 16px;
 }
 .service__author{
