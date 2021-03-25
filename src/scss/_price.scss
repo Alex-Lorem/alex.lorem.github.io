@@ -3,11 +3,18 @@
 }
 .price__container{
     margin: 10px;
+    margin-bottom: 150px;
     display: flex;
     justify-content: space-between;
     padding: 0 calc(50% - 420px);
     @media(max-width:720px){
         height: 280px;
+        margin-bottom: 75px;
+    }
+    @include phones{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
     }
 }
 @keyframes price-appearence{
@@ -18,6 +25,7 @@
     background: #fff;
     width: 14.68rem;
     height: 18.75rem;
+    margin-bottom: 15px;
     &:hover{
         display: flex;
         flex-direction: column;
@@ -48,6 +56,12 @@
         width: 32%;
         height: 95%;
     }
+    @include phones{
+        width: 14.68rem;
+        height: 18.75rem;
+        
+    }
+    
 }
 .price__title{
     display: flex;
@@ -78,9 +92,16 @@
     display: none;
     color: #81868e;
     font-size: 14px;
-    padding-right: 14%;
     padding-top: 8%;
     line-height: 2em;
+    height: 72%;
+    @include tablets{
+        line-height: 1.8em;
+    }
+    @include phones{
+        line-height: 2em;
+        font-size: 0.85rem;
+    }
     
 }
 .price__button--hidden{
@@ -89,7 +110,7 @@
     color: #fff;
     text-align: center;
     width: 100%;
-    height: 4.375rem;
+    height: 28%;
     border-width: 2px;
     border-style: solid;
     border-color: transparent;
@@ -111,7 +132,7 @@
     background-image: url(../img/price_submit.png);
     width: 100%;
     height: 100%;
-    margin-top: 9%;
+    margin-top: 10px;
 }
 .subscribe h2 {
     color: #fff;

@@ -11,56 +11,59 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
     //nav_hello
     
-    $('#nav_hello').click(e =>{
+    $('.nav_hello').click(e =>{
      e.preventDefault();
      $('html,body').animate({scrollTop:0},1000);
     });
     
-    $('#nav_about').click(e =>{
+    $('.nav_about').click(e =>{
      e.preventDefault();
      $('html,body').animate({scrollTop:document.querySelector(".first").scrollHeight},
     1000);
     });
     
-    $('#nav_service').click(e =>{
+    $('.nav_service').click(e =>{
      e.preventDefault(); 
      const height = document.querySelector(".first").scrollHeight + document.querySelector(".about").scrollHeight + document.querySelector(".details").scrollHeight + document.querySelector(".details__footer").scrollHeight;   
      $('html,body').animate({scrollTop:height},1000);
     });
     
-    $('#nav_portfolio').click(e =>{
+    $('.nav_portfolio').click(e =>{
      e.preventDefault(); 
      const height = document.querySelector(".first").scrollHeight + document.querySelector(".about").scrollHeight + document.querySelector(".details").scrollHeight + document.querySelector(".details__footer").scrollHeight +
      document.querySelector(".service").scrollHeight;   
      $('html,body').animate({scrollTop:height},1000);
     });
     
-    $('#nav_team').click(e =>{
+    $('.nav_team').click(e =>{
      e.preventDefault(); 
      const height = document.querySelector(".first").scrollHeight + document.querySelector(".about").scrollHeight + document.querySelector(".details").scrollHeight + document.querySelector(".details__footer").scrollHeight +
      document.querySelector(".service").scrollHeight +
+     document.querySelector(".portfolio__footer").scrollHeight +
      document.querySelector(".portfolio").scrollHeight;   
      $('html,body').animate({scrollTop:height},1000);
     });
     
-    $('#nav_reviews').click(e =>{
+    $('.nav_reviews').click(e =>{
      e.preventDefault(); 
      const footer_margin = parseInt($('.team__footer').css('margin-top'));
      const height = document.querySelector(".first").scrollHeight + document.querySelector(".about").scrollHeight + document.querySelector(".details").scrollHeight + document.querySelector(".details__footer").scrollHeight +
      document.querySelector(".service").scrollHeight +
      document.querySelector(".portfolio").scrollHeight +   
      document.querySelector(".team__footer").scrollHeight +   
+     document.querySelector(".portfolio__footer").scrollHeight +   
      document.querySelector(".team").scrollHeight + footer_margin;   
      $('html,body').animate({scrollTop:height},1000);
     });
     
-    $('#nav_contact').click(e =>{
+    $('.nav_contact').click(e =>{
      e.preventDefault();
       const footer_margin = parseInt($('.team__footer').css('margin-top'));
       const height = document.querySelector(".first").scrollHeight + document.querySelector(".about").scrollHeight + document.querySelector(".details").scrollHeight + document.querySelector(".details__footer").scrollHeight +
       document.querySelector(".service").scrollHeight +
       document.querySelector(".portfolio").scrollHeight +   
-      document.querySelector(".team__footer").scrollHeight +   
+      document.querySelector(".team__footer").scrollHeight +
+      document.querySelector(".portfolio__footer").scrollHeight +
       document.querySelector(".team").scrollHeight + 
       document.querySelector(".price").scrollHeight + 
       document.querySelector(".reviews").scrollHeight + footer_margin;
@@ -96,13 +99,19 @@ $(".circle__button").click(e =>{
          
         e.preventDefault();
        
-     let heightSum =
-        document.querySelector(".first").scrollHeight + 
-        document.querySelector(".about").scrollHeight + 
-        document.querySelector(".details").scrollHeight + 
-        document.querySelector(".service").scrollHeight + document.querySelector(".portfolio").scrollHeight + document.querySelector(".team").scrollHeight + document.querySelector(".reviews").scrollHeight + document.querySelector(".price").scrollHeight * 0.4;                                                
+     const footer_margin = parseInt($('.team__footer').css('margin-top'));
+         
+         
+      const height = document.querySelector(".first").scrollHeight + document.querySelector(".about").scrollHeight + document.querySelector(".details").scrollHeight + document.querySelector(".details__footer").scrollHeight +
+      document.querySelector(".service").scrollHeight +
+      document.querySelector(".portfolio").scrollHeight +   
+      document.querySelector(".team__footer").scrollHeight +
+      document.querySelector(".portfolio__footer").scrollHeight +
+      document.querySelector(".team").scrollHeight +  
+      document.querySelector(".price__container").scrollHeight + 
+      document.querySelector(".reviews").scrollHeight + footer_margin;                                               
 
-     $('html,body').animate({scrollTop:heightSum},1000);
+     $('html,body').animate({scrollTop:height},1000);
     });
 
     //service
@@ -158,9 +167,15 @@ $(window).resize(function() {
   } else{
       mixer.sort('');
   }
+//    if(windowHeight < document.querySelector(".first").scrollHeight){
+//        document.querySelector(".burger").style.cssText=`mix-blend-mode: hard-light`;
+//        alert("wfwf");
+//    }
 });
         
-       
+      window.onresize = function( event ) {
+            if(window.scrollHeight > -1){alert("FFWEf");}
+        }
         
         
     
@@ -271,7 +286,8 @@ $(".review__switcher").click(e =>{
         document.querySelector(".about").scrollHeight + 
         document.querySelector(".details").scrollHeight +
         document.querySelector(".details__footer").scrollHeight +
-        document.querySelector(".service").scrollHeight + document.querySelector(".portfolio").scrollHeight + document.querySelector(".team").scrollHeight + document.querySelector(".team__footer").scrollHeight +
+        document.querySelector(".service").scrollHeight + document.querySelector(".portfolio").scrollHeight +
+        document.querySelector(".portfolio__footer").scrollHeight + document.querySelector(".team").scrollHeight + document.querySelector(".team__footer").scrollHeight +
         document.querySelector(".reviews").scrollHeight +
         document.querySelector(".price").scrollHeight;
     
@@ -430,6 +446,14 @@ burger.addEventListener('click' , toggleMenu);
         }
     });
 
+    
+    //slider
+//    $('.team__dcontainer').slick({
+//        arrows:false,
+//        slidesToShow: 1,
+//        slidesToScroll: 1,
+//});
+    
     
 });//"DOMContentLoaded"
 

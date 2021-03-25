@@ -1,18 +1,30 @@
 .form__wrapper{
-    padding: 80px 15px;
+    padding: 5rem calc(50% - 29.375rem);
     margin: 0 0.625rem;
     background: #fff;
 }
 .form{
-    width: 100%;
+    width: 98%;
+    margin: 0 auto;
+    @include phones{
+        width: 92%;
+    }
 }
 .form__block{
     width: 30%;
+    @include phones{
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
 }
 .form__flex{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    @include phones{
+        flex-direction: column;
+    }
 }
 .form__input{
     outline: none;
@@ -23,11 +35,11 @@
     font-family: "OpenSans-Regular";
     background: transparent;
     resize: none;
-    padding: 0 5%;
+    padding: 0 10px;
 }  
 .form__textarea{
     padding: 1% 1.2%;
-    margin: 25px 0;
+    margin: 25px auto;
     height: 11.8rem;
 }
 .form__submit{
@@ -52,6 +64,7 @@
     height: 50px;
     margin-top: 20px;
     left: 44%;
+    @include slippers{left: 0;}
 }
 
 

@@ -8,6 +8,11 @@
     margin: 0 10px;
     margin-bottom: 80px;
     height: 260px;
+    @include phones{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
 }
 .contact__item{
     width: 285px;
@@ -16,6 +21,18 @@
     margin-left: calc(17% - 100px);
     &:nth-child(1){
         margin: 0;
+    }
+    @media(max-width:720px){
+        width: 32%;
+        margin: 0;
+    }
+    @include phones{
+        width: 280px;
+        height: 300px;
+        margin-top: 40px;
+        &:nth-child(1){
+            margin-top: 40px;
+        }
     }
 }
 .c-img{
@@ -70,11 +87,20 @@
     text-transform: uppercase;
     text-align: center;
     color: #81868e;
+    @media(max-width:720px){
+        font-size: 0.7rem;
+    }
+    @include phones{
+        font-size: 1rem;
+    }
 }
 .contact__text{
     display: flex;
     height: 50%;
     flex-direction: column;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+     @include phones{
+        font-size: 1.5rem; 
+    }
 }

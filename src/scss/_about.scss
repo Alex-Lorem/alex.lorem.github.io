@@ -1,6 +1,21 @@
 .about{
     background: #fff;
 }
+.ipad--wrapper{
+    @include phones{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;}
+}
+.ipad{
+    @include phones{height: 74%;}
+    @media(max-width:380px){height: 64%;}
+    @media(max-width:350px){height: 54%;}
+    @include slippers{height: 45%;}
+    
+}
 
 .about__content{
   display: flex;
@@ -23,6 +38,12 @@
       color: white;
     }
   }
+    @include tablets{
+        padding: 4.5rem calc(115% - 81.75rem);
+    }
+    @include phones{
+        padding: 2rem calc(115% - 81.75rem);
+    }
 }
 @keyframes anim {
       50% {background-color: white;color: black;}
@@ -30,7 +51,11 @@
     }
 .about__content-left{
   padding-left: 15px;
-  padding-right: calc(30% - 100px);
+  text-align: justify;
+  padding-right: calc(25% - 100px);
+    @include phones{
+        padding-right: 0;
+    }
 }
 .about__content .title{
   padding-top: 5%;

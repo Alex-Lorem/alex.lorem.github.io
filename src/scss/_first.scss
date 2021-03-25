@@ -37,6 +37,10 @@
         width: 2.4rem; 
         height: 2.4rem;
     }
+    @include phones{
+        width: 2.571rem; 
+        height: 2.571rem;
+    }
 }
 #ellipse{
     &:hover{
@@ -52,6 +56,10 @@
         width: 0.66rem; 
         height: 0.73rem;
         transform: translate(0px, -30px);
+    }
+    @include phones{
+        width: 0.714rem; 
+        height: 0.785rem;
     }
 }
 .arrow_svg{
@@ -69,6 +77,9 @@
   animation-iteration-count: infinite;
     @include tablets{ 
         height: 2.4rem;
+    }
+    @include phones{
+        height: 2.571rem;
     }
 
   @keyframes ani {

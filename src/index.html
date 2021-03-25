@@ -11,7 +11,7 @@
 
     <header>
         <div class="logo">BOUNCY</div>
-        <nav class="nav"><a href="" class="nav__item" id="nav_hello">Hello</a><a href="" class="nav__item" id="nav_about">About</a><a href="" class="nav__item" id="nav_service">Services</a><a href="" class="nav__item" id="nav_portfolio">Portfolio</a><a href="" class="nav__item" id="nav_team">Team</a><a href="" class="nav__item" id="nav_reviews">Reviews</a><a href="" class="nav__item" id="nav_contact">Contact</a></nav>
+        <nav class="nav"><a href="" class="nav__item nav_hello">Hello</a><a href="" class="nav__item nav_about">About</a><a href="" class="nav__item nav_service">Services</a><a href="" class="nav__item nav_portfolio">Portfolio</a><a href="" class="nav__item nav_team">Team</a><a href="" class="nav__item nav_reviews">Reviews</a><a href="" class="nav__item nav_contact">Contact</a></nav>
     </header>
 
     <section class="first">
@@ -35,7 +35,7 @@
                 <div class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque cor- rupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. </div>
                 <a href="" class="button">Read More</a>
             </div>
-            <div class="ipad"><img src="./img/ipad.png" alt="ipad"></div>
+            <div class="ipad--wrapper"><img src="./img/ipad.png" alt="ipad" class="ipad"></div>
         </div>
         </section>
         <section class="details">
@@ -80,13 +80,13 @@
             <div class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div>
             
             <div class="service__container-1">
-                <div class="service__left">
-                   <div class="service__buttons">
+               <div class="service__buttons">
                        <button class="service__button" data-open="p-one"><div class="tool"></div></button>
                        <button class="service__button service__button--active" data-open="p-two"><div class="design"></div></button>
                        <button class="service__button" data-open="p-three"><div class="gamepad"></div></button>
                        <button class="service__button" data-open="p-four"><div class="cable"></div></button>
                    </div>
+                <div class="service__left">
                     <div class="service__item" data-linked-with="p-one"><h3>Sympathethic Tools</h3><div class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut deleniti minima nemo nulla saepe! A aliquid blanditiis commodi consectetur<p> culpa cumque dicta distinctio, dolore doloribus dolorum eius eos excepturi, expedita fugiat in.</div></div>
                     <div class="service__item service__item--active" data-linked-with="p-two"><h3>Graphic Design</h3><div class="service-text">At vero eos et accusamus et <span>iusto</span> odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti <p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div></div>
                     <div class="service__item " data-linked-with="p-three"><h3>Nuclear UI/UX</h3><div class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa debitis ducimus enim eos excepturi id incidunt ipsam<p> Ipsum necessitatibus odio perspiciatis quas qui repellendus reprehenderit sunt vel vero voluptate voluptatibus?</div></div>
@@ -278,7 +278,7 @@
                         </div>
                 </div>
             
-            
+        </div>
         <div class="switcher__container">
             <button class="team__switcher team__switcher--active" data-open="t-one"></button>
             <button class="team__switcher" data-open="t-two"></button>
@@ -407,7 +407,7 @@ Bangladesh</div></div></div>
                 <div class="error"></div>
             </label>
             </div>
-            <label for="" class="form__block">
+            <label for="" class="form__textarea--wrapper">
                 <textarea name="comment" id="" class="form__input form__textarea" placeholder="Comment" required></textarea>
                 <div class="error"></div>
             </label>
@@ -437,15 +437,15 @@ Bangladesh</div></div></div>
     </div>
     <div class="overlay" id="overlay">
         <div class="menu__list">
-            <div class="menu__item"><a href="" class="menu__link">Hello</a></div>
-            <div class="menu__item"><a href="" class="menu__link">About</a></div>
-            <div class="menu__item"><a href="" class="menu__link">Services</a>
+            <div class="menu__item"><a href="" class="menu__link nav_hello">Hello</a></div>
+            <div class="menu__item"><a href="" class="menu__link nav_about">About</a></div>
+            <div class="menu__item"><a href="" class="menu__link nav_service">Services</a>
             </div>
-            <div class="menu__item"><a href="" class="menu__link">Portfolio</a>
+            <div class="menu__item"><a href="" class="menu__link nav_portfolio">Portfolio</a>
             </div>
-            <div class="menu__item"><a href="" class="menu__link">Team</a></div>
-            <div class="menu__item"><a href="" class="menu__link">Reviews</a></div>
-            <div class="menu__item"><a href="" class="menu__link">Contact</a></div>
+            <div class="menu__item"><a href="" class="menu__link nav_team">Team</a></div>
+            <div class="menu__item"><a href="" class="menu__link nav_reviews">Reviews</a></div>
+            <div class="menu__item"><a href="" class="menu__link nav_contact">Contact</a></div>
         </div>
             
         

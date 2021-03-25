@@ -11,6 +11,9 @@ footer{
     flex-wrap: nowrap;
     justify-content: space-between;
     width: 175px;
+    @include phones{
+        width: 250px;
+    }
 }
 footer .logo{
     color: #323a45;
@@ -44,4 +47,13 @@ footer .logo{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    @include tablets{
+        width: 1.733rem; 
+        height: 1.733rem;
+    }
+    @include phones{
+        width: 1.857rem;
+        height: 1.857rem;
+        transform: scale(1.3);
+    }
 }

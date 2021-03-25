@@ -30,13 +30,23 @@
     display: block;
 }
 .service__item {
-  display: none;
+    display: none;
     margin-left: 20px;
+    padding-right: 10px;
   &--active {
     animation-name: text-appearence;
     animation-duration: 1.5s;
     display: block;
   }
+    h3{
+        padding-bottom: 0.875rem;
+        @include tablets{
+            padding-top: 2.25rem;
+        }
+    }
+    @media(max-width:560px){
+        margin: 0;
+    }
 }
 .tool {
   background: url(../img/tool.png) no-repeat;
@@ -103,22 +113,38 @@
   max-width: 400px;
   min-height: 235px;
   color: #81868E;
+  text-align: justify;
+    @media(max-width:650px){
+        max-width: 22rem;
+    }
 }
 .service__container-1{
     display: flex;
     padding: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    @media(max-width:560px){
+        flex-direction: column;
+        height: 600px;
+    }
 }
 .service__left{
     display: flex;
-    padding-left: calc(37% - 300px);
     padding-right: calc(25% - 300px);
+    
 }
 .service__buttons{
     height: 265px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 26px;
+    
+    @media(max-width:560px){
+        flex-direction: row;
+        height: auto;
+        width: 300px;
+    }
     
 }
 .service__right{
@@ -127,8 +153,18 @@
     max-width: 450px;
     justify-content: space-between;
     align-items: center;
-    @include tablets{
+    @media(max-width:800px){
         flex-direction: column;
+        position: relative;
+        top: 95px;
+    }
+    @media(max-width:560px){
+        position: unset;
+        flex-direction: row;
+        width: 23.5rem;
+    }
+    @include slippers{
+        width:21.5rem;
     }
 }
 .default-circle{ 
@@ -144,6 +180,11 @@
     @include tablets{
         width: 8.6rem;
         height: 8.6rem;
+    }
+    @include phones{
+        width: 9.285rem;
+        height: 9.285rem;
+        font-size: 2.2rem;
     }
 }
 .branding-img{
@@ -175,9 +216,16 @@
     align-items: center;
     flex-direction: column;
     color: #81868E;
-    @include tablets{
+    @media(max-width:800px){
         margin-top: 5px;
         &:nth-child(1){margin-top: 0;}
+    }
+    @media(max-width:560px){
+        margin-top: 0;
+        transform: scale(0.8);
+        width: 32%;
+        height: 100%;
+        font-size: 1.3rem;
     }
     
 }
@@ -186,7 +234,7 @@
     position: relative;
     top: 18px;
     letter-spacing: 0.05em;
-    @include tablets{
+    @media(max-width:800px){
         top: 0;
     }
 }
@@ -196,7 +244,7 @@
     display: flex;
     justify-content: space-evenly;
     background-position-x: center;
-    @media(max-width:700px){
+    @media(max-width:800px){
         min-height: 240px;
         margin: 0;
     }
@@ -215,11 +263,18 @@
 }
 .hidden-mac{
     display: none;
-    @media(max-width:700px){
+    @media(max-width:800px){
         display: block;
-        margin: 0 auto;
+        margin-left: 70px;
         transform: scale(1);
     }
+    @media(max-width:650px){
+        margin-left: 10px;
+    }
+    @media (max-width:560px){
+        display: none;
+    }
+    
 }
 .mac{
     position: relative;
@@ -227,22 +282,26 @@
     width: 409px;
     height: 329px;
     margin-right: 15px;
-    @media(max-width:700px){
+    margin-left: 10px;
+    @media(max-width:800px){
         display: none;
     }
 }
 .service__container-2--left{
     padding-top: 22px;
-    margin-left: 1%;   
+    margin-left: 10px;
+    margin-right: 10px;   
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    @media(max-width:560px){align-items: center;}
 }
 .service .description{
     padding: 0;
     max-width: 600px;
     font-size: 16px;
+    @media(max-width:560px){text-align: center; padding: 0 10px;}
 }
 .service__author{
     text-transform: uppercase;

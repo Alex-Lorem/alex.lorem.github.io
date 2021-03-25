@@ -55,6 +55,11 @@
   @include font_decreasing {
         font-size: 1rem;
     }
+  @include phones{
+        text-align: center;
+        margin: 0;
+        padding: 0 5px;
+    }
 }
 .details__footer{
   display: flex;
@@ -82,6 +87,9 @@
         }
     }
   }
+    @include phones{
+        flex-direction: column;
+    }
     
 }
 .details__content{

@@ -44,11 +44,18 @@ body{
         padding-bottom: 30px;
     }
     .subtitle{
-        width: 400px;
+        max-width: 400px;
         margin: 20px auto;
         margin-bottom: 70px;
         text-align: center;
-        color: #81868e;  
+        color: #81868e;
+        padding: 0 10px;
+        @include tablets{
+            margin-bottom: 2rem;
+        }
+        @include phones{
+            margin: 15px auto;
+        }
     }
     .description{
         font-size: 14px;
@@ -90,6 +97,10 @@ body{
         @include tablets{
             width: 2.4rem; 
             height: 2.4rem;
+        }
+        @include phones{
+        width: 2.571rem; 
+        height: 2.571rem;
         }
     }  
      
