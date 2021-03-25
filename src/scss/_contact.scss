@@ -84,6 +84,7 @@
     margin-bottom: 15px;
 }
 .contact__subtitle{
+    display: block;
     text-transform: uppercase;
     text-align: center;
     color: #81868e;
@@ -92,6 +93,9 @@
     }
     @include phones{
         font-size: 1rem;
+    }
+    &:hover{
+        color: darkorange;
     }
 }
 .contact__text{

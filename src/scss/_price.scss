@@ -58,6 +58,7 @@
     }
         .price--active{
             animation-name: price-appearence;
+            transition-timing-function: ease-in;
             animation-duration: 2s;
             opacity: 1;
         }
@@ -140,6 +141,7 @@
 
 .subscribe{
     background-image: url(./img/price_submit.png);
+    background-size: cover;
     width: 100%;
     height: 100%;
     margin-top: 10px;

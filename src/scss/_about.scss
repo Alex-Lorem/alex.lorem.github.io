@@ -10,10 +10,6 @@
     margin-left: 15px;}
 }
 .ipad{
-    @include phones{height: 74%;}
-    @media(max-width:380px){height: 64%;}
-    @media(max-width:350px){height: 54%;}
-    @include slippers{height: 45%;}
     
 }
 
@@ -24,7 +20,9 @@
   margin: auto;
   box-sizing: content-box;
   .button{
-    margin-top: 6%;
+      @include tablets{
+          margin: 0 auto;margin-top: 20px;}
+    margin-top: 20px;
     border-color: black;
     color: black;
 
@@ -39,7 +37,10 @@
     }
   }
     @include tablets{
+        flex-direction: column-reverse;
+        align-items: center;
         padding: 4.5rem calc(115% - 81.75rem);
+        padding-top: 30px;
     }
     @include phones{
         padding: 2rem calc(115% - 81.75rem);
@@ -51,13 +52,18 @@
     }
 .about__content-left{
   padding-left: 15px;
-  text-align: justify;
+  text-align: left;
   padding-right: calc(25% - 100px);
-    @include phones{
-        padding-right: 0;
+    
+    @include tablets{
+        padding-right: 15px;
+        max-width: 400px;
     }
 }
 .about__content .title{
   padding-top: 5%;
   text-align: left;
+    @include tablets{
+        text-align: center;
+    }
 }

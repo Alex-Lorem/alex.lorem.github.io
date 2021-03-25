@@ -55,6 +55,9 @@
   @include font_decreasing {
         font-size: 1rem;
     }
+    @media(max-width:670px){
+        max-width: 350px;
+    }
   @include phones{
         text-align: center;
         margin: 0;

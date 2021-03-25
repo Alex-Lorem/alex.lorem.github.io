@@ -145,6 +145,7 @@
     height: 200px;
     text-align: center;
     background: url(./img/portfolio_footer.png);
+    background-size: cover;
     .button{
         &:hover{
             animation-duration: 1.5s;

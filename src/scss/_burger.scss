@@ -1,7 +1,7 @@
 .burger {
         mix-blend-mode: difference;
         position: fixed;
-        top: 3.6%;
+        top: 2.5rem;
         right: 5%;
         width: 2.46rem;
         height: 2.46rem;
@@ -25,16 +25,16 @@
       }
       .burger__line:nth-child(1) {
         opacity: 1;
-        transform: translate(-50%, -22px);
+        transform: translate(-50%, -16px);
       }
       .burger__line:nth-child(2) {
         transform: translate(-50%, -6px) rotate(0deg);
       }
       .burger__line:nth-child(3) {
-        transform: translate(-50%, 10px) rotate(0deg);
+        transform: translate(-50%, 4px) rotate(0deg);
 }  
 .burger--active{
-    top: 28%;
+    top: 25%;
       .burger__line:nth-child(1) {
         opacity: 0;
       }
@@ -56,6 +56,9 @@
           }
           transform: translate(-50%, -50%) rotate(45deg);
       }
+        @include tablets {
+            top: 30%
+        }
 } 
 
 
@@ -74,15 +77,14 @@
     left: 0;
     opacity: 0;
     z-index: 4;
-    
     display: none;
     
     
     @media(max-width:1024px) {
         display: flex;
     }
-    @media(max-width:768px) {
-        height: 35%;
+    @include tablets {
+        height: 40%;
     }
 }
 .overlay--active{
