@@ -66,12 +66,12 @@
     font-size: 14px;
 }
 .review__switcher{
-    background: url(../img/team__circle.png);
+    background: url(./img/team__circle.png);
     width: 10px;
     height: 10px;
     margin-left: 15px;
     &:hover{
-        background: url(../img/team__circle-active.png);
+        background: url(./img/team__circle-active.png);
         background-repeat: no-repeat;
         background-position: center;
     
@@ -86,7 +86,7 @@
     }
 }
 .review__switcher--active{
-    background: url(../img/team__circle-active.png);
+    background: url(./img/team__circle-active.png);
     background-repeat: no-repeat;
     background-position: center;
     transform:scale(1.4);

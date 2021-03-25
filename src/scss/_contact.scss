@@ -44,16 +44,16 @@
     
 }
 .contact-img-1{
-    background: url(../img/email.png);
+    background: url(./img/email.png);
 }
 .contact-img-2{
-    background: url(../img/office.png);
+    background: url(./img/office.png);
 }
 .contact-img-3{
-    background: url(../img/phone.png);
+    background: url(./img/phone.png);
 }
 .contact-email{
-    background: url(../img/contact-email.png);
+    background: url(./img/contact-email.png);
     width: 42px;
     height: 28px;
     @include tablets{width: 2.8rem; height: 1.86rem;}
@@ -64,14 +64,14 @@
     
 
 .contact-office{
-    background: url(../img/contact-office.png);
+    background: url(./img/contact-office.png);
     width: 34px;
     height: 50px;
     @include tablets{width: 2.26rem; height: 3.33rem;}
     @include phones{width: 2.42rem; height: 3.57rem;}
 }
 .contact-phone{
-    background: url(../img/contact-phone.png);
+    background: url(./img/contact-phone.png);
     width: 40px;
     height: 46px;
     @include tablets{width: 2.6666rem;height: 3.06rem;}

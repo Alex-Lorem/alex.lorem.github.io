@@ -49,7 +49,7 @@
     }
 }
 .tool {
-  background: url(../img/tool.png) no-repeat;
+  background: url(./img/tool.png) no-repeat;
   width: 27px;
   height: 27px;
     @include tablets{
@@ -62,7 +62,7 @@
     }
   }
  .design{
-  background: url(../img/design.png) no-repeat;
+  background: url(./img/design.png) no-repeat;
   width: 25px;
   height: 28px;
      @include tablets{
@@ -75,7 +75,7 @@
         }
   }
  .gamepad{
-  background: url(../img/gamepad.png) no-repeat;
+  background: url(./img/gamepad.png) no-repeat;
   width: 27px;
   height: 33px;
      @include tablets{
@@ -88,7 +88,7 @@
         }
   }
  .cable{
-  background: url(../img/cable.png) no-repeat;
+  background: url(./img/cable.png) no-repeat;
   width: 25px;
   height: 26px;
   position: relative;
@@ -172,7 +172,7 @@
     width: 130px;
     height: 130px;
     background-position: 50% 50%;
-    background-image: url(../img/circle.png);
+    background-image: url(./img/circle.png);
     background-repeat: no-repeat;
     align-items: center;
     justify-content: center;
@@ -188,7 +188,7 @@
     }
 }
 .branding-img{
-    background-image: url(../img/circle_branding.png);
+    background-image: url(./img/circle_branding.png);
     position: absolute;
     width: inherit;
     height: inherit;
@@ -196,14 +196,14 @@
     
 }
 .web-img{
-    background-image: url(../img/circle_web.png);
+    background-image: url(./img/circle_web.png);
     position: absolute;
     width: inherit;
     height: inherit;
     background-position: 50.1% 50.2%;
 }
 .ui-img{
-    background-image: url(../img/circle_ui.png);
+    background-image: url(./img/circle_ui.png);
     background-repeat: no-repeat;
     position: absolute;
     width: inherit;
@@ -239,7 +239,7 @@
     }
 }
 .service__container-2{
-    background: url(../img/man.png); 
+    background: url(./img/man.png); 
     margin-top: 140px;
     display: flex;
     justify-content: space-evenly;
