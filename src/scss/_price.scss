@@ -21,6 +21,10 @@
         0%{opacity: 0;}
         100%{opacity: 1;} 
     }
+@keyframes price-disappearence{
+        0%{opacity: 1;}
+        100%{opacity: 0;} 
+    }
 .price__item{
     background: #fff;
     width: 14.68rem;
@@ -52,6 +56,12 @@
             display: none;
         }
     }
+        .price--active{
+            animation-name: price-appearence;
+            animation-duration: 2s;
+            opacity: 1;
+        }
+
     @media(max-width:720px){
         width: 32%;
         height: 95%;
