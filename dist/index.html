@@ -188,8 +188,10 @@
     <section class="team">
         <h2 class="title">the team</h2>
         <div class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div>
-        <div class="team__container">
-            <div class="team__item team__item--active" data-linked-with="t-one">
+        <div class="swiper-container">
+           <div class="swiper-wrapper">
+            <div class="swiper-slide team__item--active" data-linked-with="t-one">
+               <div class="team__item--wrapper">
                 <div class="team__img--wrapper">
                 <img src="./img/abdullah.png" alt="" class="team__img">
                 </div>
@@ -219,7 +221,9 @@
                             </div>
                         </div>
                 </div>
-            <div class="team__item" data-linked-with="t-two">
+            </div>
+            <div class="swiper-slide" data-linked-with="t-two">
+               <div class="team__item--wrapper">
                 <div class="team__img--wrapper">
                 <img src="./img/dima.jpg" alt="" class="team__img"></div>
                 <div class="team__item--right">
@@ -248,7 +252,9 @@
                             </div>
                         </div>
                 </div>
-                <div class="team__item" data-linked-with="t-three">
+            </div>
+                <div class="swiper-slide" data-linked-with="t-three">
+                <div class="team__item--wrapper">
                 <div class="team__img--wrapper">
                 <img src="./img/sierra.jpg" alt="" class="team__img"></div>
                 <div class="team__item--right">
@@ -277,13 +283,15 @@
                             </div>
                         </div>
                 </div>
-            
-        </div>
-        <div class="switcher__container">
+            </div>
+            </div>
+            <div class="swiper-pagination">
             <button class="team__switcher team__switcher--active" data-open="t-one"></button>
             <button class="team__switcher" data-open="t-two"></button>
             <button class="team__switcher" data-open="t-three"></button>
         </div>
+        </div>
+        
     </section>
     <div class="team__footer">
             <div class="team__footer--title">Already Loved us? Let's talk!</div>
@@ -454,10 +462,6 @@ Bangladesh</a></div></div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<!--
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfQyvJLIKMhDsBWHaZ4ti-rKRrRvNiT9E&callback=initMap">
-</script>
--->
 
     <script src="script.min.js"></script>
 </body>
