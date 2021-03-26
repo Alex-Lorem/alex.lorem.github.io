@@ -1,5 +1,5 @@
 .burger {
-        mix-blend-mode: difference;
+        mix-blend-mode: hard-light;
         position: fixed;
         top: 2.5rem;
         right: 5%;
@@ -13,7 +13,8 @@
     @media(max-width:1024px) {
         display: block;
     }
-      }
+}
+.burger-mix{mix-blend-mode: difference; }
       .burger__line {
         display: block;
         background-color: #fff;

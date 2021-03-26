@@ -151,10 +151,11 @@ $(".service__button").click(e =>{
                 
             });
     
-        
+  let window_Height = window.innerHeight ? window.innerHeight : $(window).height();
+  let window_Width = window.innerWidth ? window.innerWidth : $(window).width();
   function windowSize() {
-  windowHeight = window.innerHeight ? window.innerHeight : $(window).height();
-  windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
+  let windowHeight = window.innerHeight ? window.innerHeight : $(window).height();
+  let windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
 
 }
     
@@ -164,31 +165,28 @@ windowSize();
 // For example, get window size on window resize
 $(window).resize(function() {
   windowSize();
-  if (windowWidth >550 && windowWidth < 768) {
+  if (window_Width >550 && window_Width < 768) {
      mixer.sort('default:desc');
   } else{
       mixer.sort('');
   } 
-    
-    
-    
-    
-//    if(windowHeight < document.querySelector(".first").scrollHeight){
-//        document.querySelector(".burger").style.cssText=`mix-blend-mode: hard-light`;
-//        alert("wfwf");
-//    }
 });
     
-    
-    if (windowWidth >550 && windowWidth < 768) {
+    if (window_Width >550 && window_Width < 768) {
      mixer.sort('default:desc');
   } else{
       mixer.sort('');
   } 
-    if (windowHeight > $('.first').scrollHeight) {
-        console.log("done");
+    let burger_top = parseInt($('.burger').css('top'));
+    let burger_height = parseInt($('.burger').css('height')) * 0.7;
+    let mix = document.querySelector('.first').scrollHeight - burger_top - burger_height;
+    $(window).scroll(function () {
+    if ($(window).scrollTop() > mix) {
+        $('.burger').addClass('burger-mix');
+    } else {
+        $('.burger').removeClass('burger-mix')
     }
-    
+});
         
       
         
@@ -279,15 +277,17 @@ $(".review__switcher").click(e =>{
         
     e.preventDefault();
    
-    let height = 
-        document.querySelector(".first").scrollHeight + 
-        document.querySelector(".about").scrollHeight + 
-        document.querySelector(".details").scrollHeight +
-        document.querySelector(".details__footer").scrollHeight +
-        document.querySelector(".service").scrollHeight + document.querySelector(".portfolio").scrollHeight +
-        document.querySelector(".portfolio__footer").scrollHeight + document.querySelector(".team").scrollHeight + document.querySelector(".team__footer").scrollHeight +
-        document.querySelector(".reviews").scrollHeight +
-        document.querySelector(".price").scrollHeight;
+    const footer_margin = parseInt($('.team__footer').css('margin-top'));
+      const price_container = parseInt($('.price__container').css('margin-bottom'));
+      const height = document.querySelector(".first").scrollHeight + document.querySelector(".about").scrollHeight + document.querySelector(".details").scrollHeight + document.querySelector(".details__footer").scrollHeight +
+      document.querySelector(".service").scrollHeight +
+      document.querySelector(".portfolio").scrollHeight +   
+      document.querySelector(".team__footer").scrollHeight +
+      document.querySelector(".portfolio__footer").scrollHeight +
+      document.querySelector(".team").scrollHeight + 
+      document.querySelector(".subscribe").scrollHeight + 
+      document.querySelector(".price").scrollHeight + 
+      document.querySelector(".reviews").scrollHeight + price_container + footer_margin;
     
     $('html,body').animate({scrollTop:height},1000);
         
@@ -443,14 +443,18 @@ burger.addEventListener('click' , toggleMenu);
             
         }
     });
+   
+    
+    
 
     
     //slider
     const swiper = new Swiper('.swiper-container', {
-  speed: 300,
-  spaceBetween: 100,
+    speed: 300,
+    spaceBetween: 100,
     pagination: {
     el: '.swiper-pagination',
+    clickable: true
   }
 });
     
