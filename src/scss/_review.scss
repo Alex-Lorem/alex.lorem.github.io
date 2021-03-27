@@ -25,6 +25,10 @@
     @media(max-width:720px){
         flex-direction: column;
         align-items: center;
+        min-height: 500px;
+    }
+    @include phones{
+            min-height: 550px;
     }
     
 }
@@ -84,6 +88,9 @@
         width: 0.714rem;
         height: 0.714rem;
     }
+}
+.switcher__container{
+    margin-top: 15px;
 }
 .review__switcher--active{
     background: url(./img/team__circle-active.png);
